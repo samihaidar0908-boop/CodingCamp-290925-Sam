@@ -1,0 +1,132 @@
+/* Background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1e293b; /* abu gelap */
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Card container */
+.card {
+  background: #2d3748;      /* abu gelap lebih terang */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  width: 500px;
+  color: white;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.form input, .form button {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.form input {
+  flex: 1;
+}
+
+.form button {
+  background: #3b82f6; /* biru */
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form button:hover {
+  background: #2563eb;
+}
+
+/* Error text */
+.error {
+  color: #f87171;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.btn-green {
+  background: #22c55e;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-green:hover { background: #16a34a; }
+
+.btn-red {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-red:hover { background: #dc2626; }
+
+/* Todo list */
+.todo-list {
+  background: #374151;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.todo-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  font-weight: bold;
+  border-bottom: 1px solid #4b5563;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+#todo-list li {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #4b5563;
+}
+
+#todo-list li button {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#todo-list li button:hover {
+  background: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  color: #6d7f9e;
+}

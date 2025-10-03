@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo - Akbar</title>
+
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="css/style.css">
+      <!-- Tailwind CSS via CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+
+<body>
+
+    <!-- header -->
+    <header></header>
+    <div class="card">
+    <h1 class="text-3xl font-bold mb-4 text-center text-white">Akbar Todo App</h1>
+
+    <!-- main content -->
+    <main>
+        <!-- form to do -->
+        <section>
+            <form id="todo-form">
+                <input type="text" class="border rounded p-[9px]" id="todo-input" placeholder="Enter a new todo..." required>
+                <input type="date" class="border rounded p-[9px]" id="todo-date" required>
+                <button type="button" onclick="AddTodo()" class="bg-blue-500 rounded text-white p-[9px]">+</button>
+                <!-- Tambahkan di bawah form -->
+                <p id="error-message" class="text-red-500 mt-2"></p>
+        </form>
+        </section>
+
+        <!-- Tambahkan search box di sini -->
+        <section class="mt-4">
+            <input type="text" id="search-input" class="border rounded p-[9px] w-full" placeholder="Search todo..." oninput="searchTodo()">
+        </section>
+
+        <!-- action button -->
+        <section  class="mt-4 flex gap-2">
+            <button class="bg-red-500 rounded text-white p-[9px]" onclick="DeleteAllTodo()">Delete All</button>
+            <button class="bg-green-500 rounded text-white p-[9px]" onclick="filterTodo()">Filter</button>
+        </section>
+
+
+        <!-- list to do
+         <section  class="mt-4">
+            <ul id="todo-list" class="mt-4">
+                Todo items will be added here dynamically
+                <p class="text-center text-gray-500">No todos yet. Add one above!</p>
+            </ul>
+         </section> -->
+
+
+         
+         <!-- list to do -->
+        <section class="mt-6 bg-gray-700 rounded-lg p-4">
+         <!-- Header Table -->
+        <div class="grid grid-cols-3 text-white font-semibold border-b border-gray-600 pb-2 mb-2">
+            <span>Task and Date</span>
+            <span class="text-right">Actions</span>
+        </div>
+
+        <!-- Todo Items -->
+        <ul id="todo-list" class="space-y-2">
+            <p class="text-center text-gray-400">No todos yet. Add one above!</p>
+        </ul>
+        </section>
+  
+    
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <p style="text-align: center;">&copy; 2025 sami akbar todo app</p>
+    </footer>
+  </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
